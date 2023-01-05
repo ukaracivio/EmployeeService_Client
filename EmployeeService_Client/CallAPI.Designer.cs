@@ -38,6 +38,12 @@
             this.btonPut = new System.Windows.Forms.Button();
             this.btonDelete = new System.Windows.Forms.Button();
             this.tboxResponse = new System.Windows.Forms.RichTextBox();
+            this.tboxAge = new System.Windows.Forms.TextBox();
+            this.tboxSalary = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btonGetAll
@@ -60,6 +66,7 @@
             this.btonGet.TabIndex = 1;
             this.btonGet.Text = "Get";
             this.btonGet.UseVisualStyleBackColor = true;
+            this.btonGet.Click += new System.EventHandler(this.btonGet_Click);
             // 
             // tboxID
             // 
@@ -103,6 +110,7 @@
             this.btonPost.TabIndex = 6;
             this.btonPost.Text = "Post";
             this.btonPost.UseVisualStyleBackColor = true;
+            this.btonPost.Click += new System.EventHandler(this.btonPost_Click);
             // 
             // btonPut
             // 
@@ -126,17 +134,76 @@
             // 
             // tboxResponse
             // 
-            this.tboxResponse.Location = new System.Drawing.Point(12, 153);
+            this.tboxResponse.Location = new System.Drawing.Point(12, 272);
             this.tboxResponse.Name = "tboxResponse";
             this.tboxResponse.Size = new System.Drawing.Size(919, 373);
             this.tboxResponse.TabIndex = 9;
             this.tboxResponse.Text = "";
             // 
+            // tboxAge
+            // 
+            this.tboxAge.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.tboxAge.Location = new System.Drawing.Point(426, 131);
+            this.tboxAge.Name = "tboxAge";
+            this.tboxAge.Size = new System.Drawing.Size(132, 29);
+            this.tboxAge.TabIndex = 10;
+            // 
+            // tboxSalary
+            // 
+            this.tboxSalary.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.tboxSalary.Location = new System.Drawing.Point(426, 177);
+            this.tboxSalary.Name = "tboxSalary";
+            this.tboxSalary.Size = new System.Drawing.Size(132, 29);
+            this.tboxSalary.TabIndex = 11;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(370, 48);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(39, 15);
+            this.label2.TabIndex = 12;
+            this.label2.Text = "Name";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(370, 92);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(50, 15);
+            this.label3.TabIndex = 13;
+            this.label3.Text = "Position";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(370, 139);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(28, 15);
+            this.label4.TabIndex = 14;
+            this.label4.Text = "Age";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(370, 185);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(38, 15);
+            this.label5.TabIndex = 15;
+            this.label5.Text = "Salary";
+            // 
             // CallAPI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(943, 538);
+            this.ClientSize = new System.Drawing.Size(943, 657);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.tboxSalary);
+            this.Controls.Add(this.tboxAge);
             this.Controls.Add(this.tboxResponse);
             this.Controls.Add(this.btonDelete);
             this.Controls.Add(this.btonPut);
@@ -166,5 +233,11 @@
         private Button btonPut;
         private Button btonDelete;
         private RichTextBox tboxResponse;
+        private TextBox tboxAge;
+        private TextBox tboxSalary;
+        private Label label2;
+        private Label label3;
+        private Label label4;
+        private Label label5;
     }
 }
